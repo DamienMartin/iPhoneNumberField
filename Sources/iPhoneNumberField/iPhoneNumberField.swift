@@ -152,7 +152,7 @@ public struct iPhoneNumberField: UIViewRepresentable {
         uiView.setContentHuggingPriority(.defaultHigh, for: .vertical)
         uiView.addTarget(context.coordinator,
                          action: #selector(Coordinator.textViewDidChange),
-                         for: .editingChanged)
+                         for: .valueChanged)
         uiView.delegate = context.coordinator
         uiView.withExamplePlaceholder = placeholder == nil
         if let defaultRegion = defaultRegion {
